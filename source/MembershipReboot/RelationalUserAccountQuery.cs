@@ -22,7 +22,7 @@ namespace Thinktecture.IdentityManager.MembershipReboot
     public class RelationalUserAccountQuery<TAccount>
         where TAccount : RelationalUserAccount
     {
-        public static string NameClaimType = Constants.ClaimTypes.Name;
+        public const string NameClaimType = Constants.ClaimTypes.Name;
 
         public static IQueryable<TAccount> Filter(IQueryable<TAccount> query, string filter)
         {
