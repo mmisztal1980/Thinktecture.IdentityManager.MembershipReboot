@@ -16,7 +16,7 @@
 
 using BrockAllen.MembershipReboot;
 
-namespace Thinktecture.IdentityManager.Host
+namespace Thinktecture.IdentityManager.Host.Config
 {
     public class CustomGroup : RelationalGroup
     {

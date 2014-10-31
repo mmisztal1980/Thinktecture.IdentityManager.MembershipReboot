@@ -15,6 +15,7 @@
  */
 
 using Owin;
+using Thinktecture.IdentityManager.Host.Config;
 
 namespace Thinktecture.IdentityManager.Host
 {
@@ -22,7 +23,7 @@ namespace Thinktecture.IdentityManager.Host
     {
         public void Configuration(IAppBuilder app)
         {
-            var factory = new Thinktecture.IdentityManager.Host.MembershipRebootIdentityManagerFactory("CustomMembershipReboot");
+            var factory = new MembershipRebootIdentityManagerFactory("CustomMembershipReboot");
 
             app.UseIdentityManager(new IdentityManagerConfiguration()
             {

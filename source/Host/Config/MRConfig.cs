@@ -15,6 +15,7 @@
  */
 
 using BrockAllen.MembershipReboot;
+using Thinktecture.IdentityManager.Host.Config;
 
 namespace Thinktecture.IdentityManager.Host
 {

@@ -17,7 +17,7 @@
 using BrockAllen.MembershipReboot.Relational;
 using System.ComponentModel.DataAnnotations;
 
-namespace Thinktecture.IdentityManager.Host
+namespace Thinktecture.IdentityManager.Host.Config
 {
     public class CustomUser : RelationalUserAccount
     {

@@ -18,7 +18,7 @@ using BrockAllen.MembershipReboot;
 using BrockAllen.MembershipReboot.Ef;
 using Thinktecture.IdentityManager.MembershipReboot;
 
-namespace Thinktecture.IdentityManager.Host
+namespace Thinktecture.IdentityManager.Host.Config
 {
     public class MembershipRebootIdentityManagerFactory
     {
