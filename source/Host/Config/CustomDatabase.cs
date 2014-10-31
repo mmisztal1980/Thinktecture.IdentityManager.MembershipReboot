@@ -13,16 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-using BrockAllen.MembershipReboot;
+
 using BrockAllen.MembershipReboot.Ef;
-using BrockAllen.MembershipReboot.Relational;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using Thinktecture.IdentityManager;
-using Thinktecture.IdentityManager.MembershipReboot;
 
 namespace Thinktecture.IdentityManager.Host
 {
@@ -39,7 +31,7 @@ namespace Thinktecture.IdentityManager.Host
         }
 
         public CustomDatabase(string name)
-            :base(name)
+            : base(name)
         {
         }
     }

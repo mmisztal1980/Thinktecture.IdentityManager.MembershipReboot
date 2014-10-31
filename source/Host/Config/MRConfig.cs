@@ -13,17 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 using BrockAllen.MembershipReboot;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Thinktecture.IdentityManager.Host
 {
     public class MRConfig
     {
         public static readonly MembershipRebootConfiguration<CustomUser> config;
+
         static MRConfig()
         {
             config = new MembershipRebootConfiguration<CustomUser>();

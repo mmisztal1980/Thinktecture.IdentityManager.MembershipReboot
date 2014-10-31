@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 using BrockAllen.MembershipReboot;
 using BrockAllen.MembershipReboot.Ef;
-using BrockAllen.MembershipReboot.Relational;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using Thinktecture.IdentityManager;
 using Thinktecture.IdentityManager.MembershipReboot;
 
 namespace Thinktecture.IdentityManager.Host
 {
     public class MembershipRebootIdentityManagerFactory
     {
-        string connString;
+        private string connString;
+
         public MembershipRebootIdentityManagerFactory(string connString)
         {
             this.connString = connString;
         }
-        
+
         public IIdentityManagerService Create()
         {
             var db = new CustomDatabase(connString);
@@ -48,14 +42,14 @@ namespace Thinktecture.IdentityManager.Host
 
             MembershipRebootIdentityManagerService<CustomUser, CustomGroup> idMgr = null;
             idMgr = new MembershipRebootIdentityManagerService<CustomUser, CustomGroup>(userSvc, userRepo, groupSvc, groupRepo);
-            
+
             // uncomment to allow additional properties mapped to claims
             //idMgr = new MembershipRebootIdentityManagerService<CustomUser, CustomGroup>(userSvc, userRepo, groupSvc, groupRepo, () =>
             //{
             //    var meta = idMgr.GetStandardMetadata();
             //    meta.UserMetadata.UpdateProperties =
             //        meta.UserMetadata.UpdateProperties.Union(
-            //            new PropertyMetadata[] { 
+            //            new PropertyMetadata[] {
             //                idMgr.GetMetadataForClaim(Constants.ClaimTypes.Name, "Name")
             //            }
             //        );
